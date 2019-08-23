@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ListPage } from './list.page';
+import { ListItemModalComponent } from './list-item-modal/list-item-modal.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,14 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ListPage]
+  declarations: [
+    // importing your components
+    ListPage,
+    ListItemModalComponent
+  ],
+  entryComponents:[    
+    ListPage,
+    ListItemModalComponent
+  ],
 })
 export class ListPageModule {}
